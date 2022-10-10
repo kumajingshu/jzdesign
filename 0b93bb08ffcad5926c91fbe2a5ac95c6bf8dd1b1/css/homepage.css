@@ -11,14 +11,31 @@
                 "div2 div2 div2"
                 "div3 div3 div3"
                 "div4 div4 div4"
+                "div8 div8 div8"
                 "div5 div5 div5"
+                "div6 div6 div6"
+                "div7 div7 div7"
+            }
+#content2{
+            grid-template-columns:repeat(3,1fr);
+            /*Create a 6 columns*/
+            grid-auto-rows:minmax(240px,auto);
+            grid-gap:30px;
+            display:grid;
+            max-width:980px;
+            margin:0 auto;
+            grid-template-areas:
+                "div5 div5 div5"
+                "div6 div6 div6"
+                "div7 div7 div7"
             }
 .card-img{
   border-radius:.5rem;
 }
+
 @media screen and (min-width:900px){
     #content{
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(6,1fr);
     /*Create a 6 columns*/
     grid-auto-rows:minmax(300px,auto);
     grid-gap:30px;
@@ -26,8 +43,23 @@
     max-width:980px;
     margin:0 auto;
     grid-template-areas:
-        "div1 div1 div2"
-        "div3 div4 div5";
+        "div1 div1 div1 div2 div2 div2"
+        "div3 div3 div3 div4 div4 div4";
+    }
+    .self-intro{
+    margin-right:6rem;}
+}
+@media screen and (min-width:900px){
+    #content2{
+    grid-template-columns:repeat(6,1fr);
+    /*Create a 6 columns*/
+    grid-auto-rows:minmax(300px,auto);
+    grid-gap:30px;
+    display:grid;
+    max-width:980px;
+    margin:0 auto;
+    grid-template-areas:
+        "div5 div5 div6 div6 div7 div7";
     }
     .self-intro{
     margin-right:6rem;}
